@@ -1,4 +1,4 @@
-import { RawOptionsCallbacks } from './Assets/Admin/plugins/FilterizrOptions/defaultOptions';
+import { RawOptionsCallbacks } from './FilterizrOptions/defaultOptions';
 import FilterizrOptions from './FilterizrOptions/FilterizrOptions';
 import FilterItems from './FilterItems';
 /**
