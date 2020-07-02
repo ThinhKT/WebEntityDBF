@@ -17,6 +17,12 @@ namespace WEB.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult Login(FormCollection fc)
+        {
+            //để đây
+            return View();
+        }
         public ActionResult Register()
         {
             return View();
