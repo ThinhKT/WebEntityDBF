@@ -21,7 +21,7 @@ namespace WEB.Controllers
         public ActionResult Login(FormCollection fc)
         {
             //để đây
-            return View();
+            return RedirectToAction("Dashboard", "Dashboard");
         }
         public ActionResult Register()
         {

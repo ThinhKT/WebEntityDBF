@@ -17,32 +17,49 @@ namespace WEB.Controllers
         {
             return View();
         }
-        public ActionResult DashBoard()
+        [HttpPost]
+        public ActionResult Login(FormCollection fc)
         {
+            return RedirectToAction("Dashboard", "Admin");
+        }
+        public ActionResult Dashboard()
+        {
+            Session["View"] = "Dashboard";
             return View();
         }
         public ActionResult Product()
         {
+            Session["View"] = "Product";
             return View();
         }
         public ActionResult ProductCate()
         {
+            Session["View"] = "Other";
             return View();
         }
         public ActionResult ListUser()
         {
+            Session["View"] = "ListUser";
             return View();
         }
         public ActionResult Manager()
         {
+            Session["View"] = "Other";
             return View();
         }
         public ActionResult Chart()
         {
+            Session["View"] = "Other";
             return View();
         }
         public ActionResult Order()
         {
+            Session["View"] = "Order";
+            return View();
+        }
+        public ActionResult Income()
+        {
+            Session["View"] = "Income";
             return View();
         }
     }
