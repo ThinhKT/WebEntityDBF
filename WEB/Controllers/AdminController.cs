@@ -8,6 +8,7 @@ namespace WEB.Controllers
 {
     public class AdminController : Controller
     {
+        public ShopEntities db = new ShopEntities();
         // GET: Admin
         public ActionResult Index()
         {
@@ -30,6 +31,12 @@ namespace WEB.Controllers
         public ActionResult Product()
         {
             Session["View"] = "Product";
+            var query = from pd in db.Products
+                        select pd;
+            ViewBag.ProductLoad = query.ToList();
+            var query2 = from pd in db.ProductCategories
+                        select pd;
+            ViewBag.ProductCategoryLoad = query2.ToList();
             return View();
         }
         public ActionResult ProductCate()
@@ -40,6 +47,9 @@ namespace WEB.Controllers
         public ActionResult ListUser()
         {
             Session["View"] = "ListUser";
+            var query = from pd in db.ApplicationUsers
+                        select pd;
+            ViewBag.UserList = query.ToList();
             return View();
         }
         public ActionResult Manager()
@@ -55,6 +65,10 @@ namespace WEB.Controllers
         public ActionResult Order()
         {
             Session["View"] = "Order";
+            //var query = from od in db.Orders
+            //            join odd in db.OrderDetails on od.ID equals odd.OrderID
+            //            select new { Table1 = od, Table2 = odd };
+            //ViewBag.OrderList = query.ToList();
             return View();
         }
         public ActionResult Income()
