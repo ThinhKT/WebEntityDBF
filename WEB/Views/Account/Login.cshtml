@@ -8,7 +8,16 @@
         <div class="checkout__form">
             <h4>Đăng nhập</h4>
             <form action="/Account/Login" method="post">
+                @if (ViewBag.Err != null)
+                {
+                    <h2 style="color:red">*@ViewBag.Err</h2>
+                }
                 <div class="row">
+                    @if (Session["NonLogin"] != null)
+                    {
+                        <h2 style="color:red">*@Session["NonLogin"]</h2>
+                        Session["NonLogin"] = null;
+                    }
                     <div class="col-lg-8 col-md-6">
                         <div class="checkout__input">
                             <p>User Name<span>*</span></p>

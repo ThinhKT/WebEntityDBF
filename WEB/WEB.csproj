@@ -148,6 +148,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Assets\User\TempCart.cs" />
     <Compile Include="ContactDetail.cs">
       <DependentUpon>ShopModel.tt</DependentUpon>
     </Compile>
@@ -473,6 +474,7 @@
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Admin\Income.cshtml" />
+    <Content Include="Views\ShoppingCart\MakeOrder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
